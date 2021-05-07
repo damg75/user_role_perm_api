@@ -18,3 +18,27 @@ Content-Type: : application/json
 }
 ###    
 DELETE http://localhost:8000/api/permissions/2 HTTP/1.1
+
+
+
+###
+GET http://localhost:8000/api/roles/ HTTP/1.1
+###
+GET http://localhost:8000/api/roles/1 HTTP/1.1
+###   
+POST http://localhost:8000/api/roles/ HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "my new role 1111",
+    "active": true
+}
+###
+PUT http://localhost:8000/api/roles/1 HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "my updated 2role"
+}
+###    
+DELETE http://localhost:8000/api/roles/2 HTTP/1.1
