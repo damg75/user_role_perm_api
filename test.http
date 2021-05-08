@@ -42,3 +42,5 @@ Content-Type: : application/json
 }
 ###    
 DELETE http://localhost:8000/api/roles/2 HTTP/1.1
+###
+GET http://localhost:8000/api/roles/1/permissions/ HTTP/1.1

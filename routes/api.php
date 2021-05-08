@@ -23,3 +23,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('permissions',PermissionController::class);
 Route::resource('roles',RoleController::class);
 
+//test
+Route::get('/roles/{id}/permissions', [RoleController::class, 'role_permissions_index']);
+

@@ -73,4 +73,10 @@ class RoleController extends Controller
         $success = Role::destroy($id);
         return $success;
     }
+
+    public function role_permissions_index($id)
+    {
+        $role = Role::findOrFail($id);
+        return $role->permissions;
+    }
 }
