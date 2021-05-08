@@ -21,7 +21,7 @@ class CreatePermissionRoleTable extends Migration
             
             // $table->primary(['role_id', 'permission_id']);
 
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
