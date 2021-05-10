@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\Permission;
 
 
 class RoleController extends Controller
@@ -29,10 +30,16 @@ class RoleController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'active' => 'required'
+            'active' => 'required',
+            'permissions' => 'required'
         ]);
+
     
         $success = Role::create($request->all());
+        $permissions = $request->permissions;
+        foreach ($permissions as $perm) {
+            $success->permissions()->attach($perm);
+        }
         return $success;
     }
 

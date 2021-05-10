@@ -30,10 +30,15 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required'
+            // 'roles' => 'required'
         ]);
 
     
         $success = User::create($request->all());
+        // $roles = $request->roles;
+        // foreach ($roles as $role) {
+        //     $success->roles()->attach($role);
+        // }
         return $success;
     }
 
