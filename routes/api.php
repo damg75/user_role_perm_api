@@ -29,4 +29,6 @@ Route::resource('users',UserController::class);
 
 //test
 Route::get('/roles/{id}/permissions', [RoleController::class, 'role_permissions_index']);
+Route::get('/users/{id}/roles', [UserController::class, 'user_roles_index']);
+
 

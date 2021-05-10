@@ -22,13 +22,23 @@ class DatabaseSeeder extends Seeder
             array_push($associations, $permissions[0], $permissions[rand(0,count($permissions)-1)]);
             return $associations;
         }
+        function role_user($roles) 
+        {
+            $associations = [];
+            array_push($associations, $roles[0], $roles[rand(0,count($roles)-1)]);
+            return $associations;
+        }
         $permissions = \App\Models\Permission::factory(10)->create();
         $roles = \App\Models\Role::factory(3)
         ->hasAttached(
             permission_role($permissions)
         )
         ->create();
-        $users = \App\Models\User::factory(10)->create();
+        $users = \App\Models\User::factory(10)
+        ->hasAttached(
+            role_user($roles) 
+        )
+        ->create();
 
 
     }
