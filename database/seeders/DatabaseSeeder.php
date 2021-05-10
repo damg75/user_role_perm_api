@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 use App\Models\Role;
 use App\Models\Permission;
 
@@ -27,6 +28,8 @@ class DatabaseSeeder extends Seeder
             permission_role($permissions)
         )
         ->create();
+        $users = \App\Models\User::factory(10)->create();
+
 
     }
 }
