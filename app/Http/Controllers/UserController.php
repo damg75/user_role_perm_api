@@ -74,4 +74,10 @@ class UserController extends Controller
         $success = User::destroy($id);
         return $success;
     }
+
+    public function user_roles_index($id)
+    {
+        $user = User::findOrFail($id);
+        return $user->roles;
+    }
 }
