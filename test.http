@@ -44,3 +44,30 @@ Content-Type: : application/json
 DELETE http://localhost:8000/api/roles/2 HTTP/1.1
 ###
 GET http://localhost:8000/api/roles/1/permissions/ HTTP/1.1
+
+
+###
+GET http://localhost:8000/api/users HTTP/1.1
+###      
+POST http://localhost:8000/api/users/ HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "usuario",
+    "email": "email@example.com",
+    "password": "123456"
+}
+###               
+GET http://localhost:8000/api/users/1 HTTP/1.1
+###      
+PUT http://localhost:8000/api/users/1 HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "update",
+    "email": "update@example.com",
+    "password": "123456"
+}
+###      
+DELETE http://localhost:8000/api/users/1 HTTP/1.1
+
