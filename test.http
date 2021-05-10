@@ -54,9 +54,12 @@ POST http://localhost:8000/api/users/ HTTP/1.1
 Content-Type: : application/json
 
 {
-    "name": "usuario 1",
+    "username": "usuario1",
     "email": "email@example.com",
-    "password": "123456"
+    "first_name": "Daniel",
+    "last_name": "Ejemplo",
+    "password": "123456",
+    "active": true
 }
 ###               
 GET http://localhost:8000/api/users/1 HTTP/1.1
