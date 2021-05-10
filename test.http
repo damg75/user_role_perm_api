@@ -7,7 +7,7 @@ POST http://localhost:8000/api/permissions/ HTTP/1.1
 Content-Type: : application/json
 
 {
-    "name": "my new permission 1"
+    "name": "Beige1"
 }
 ###
 PUT http://localhost:8000/api/permissions/1 HTTP/1.1
